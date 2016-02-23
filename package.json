@@ -1,0 +1,25 @@
+{
+  "name": "mongodbproject",
+  "version": "1.0.0",
+  "description": "mongodb and nodejs",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bestyxie/mongodbproject.git"
+  },
+  "keywords": [
+    "mongodb",
+    "nodejs"
+  ],
+  "author": "bestyxie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bestyxie/mongodbproject/issues"
+  },
+  "homepage": "https://github.com/bestyxie/mongodbproject#readme"
+}
