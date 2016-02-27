@@ -1,0 +1,27 @@
+{
+  "name": "mongodbproject",
+  "description": "mongodb and nodejs",
+  "main": "server.js",
+  "authors": [
+    "bestyxie"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "mongodb",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/bestyxie/mongodbproject",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
