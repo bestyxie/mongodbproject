@@ -5,9 +5,11 @@
   "main": "server.js",
   "dependencies": {},
   "devDependencies": {
+    "connect-mongo": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
-    "gulp-nodemon": "^2.0.6"
+    "gulp-nodemon": "^2.0.6",
+    "morgan": "^1.7.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

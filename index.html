@@ -1,0 +1,37 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+    <div id="parent1">
+    	<h1>before write</h1>
+    </div>
+	
+<script type="text/javascript">
+    function stopBubble(e){
+    	if(e && e.stopPropagation){
+    		// 因为它支持W3C的stopPropagation方法
+    		e.stopPropagation();
+    	}
+    	else{
+    		window.event.cancleBubble = true;
+    	}
+    }
+
+	var h1 = document.getElementsByTagName('h1')[0];
+
+	h1.addEventListener('click',function(e){
+		alert('childern');
+		stopBubble(e);
+	},false);
+	var parent = document.getElementById('parent1');
+	parent.addEventListener('click',function(e){
+		alert('parent1');
+	},false);
+	// h1.onclick = function(e){
+	// 	alert("hahah");
+	// }
+</script>
+</body>
+</html>
