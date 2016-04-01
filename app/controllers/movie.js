@@ -20,7 +20,7 @@ exports.details = function(req,res){
 
 	Movie.findById(id,function(err,movie){
 		res.render('detail',{
-				title:'imooc' + movie.title,
+				title:'imooc 详情页',
 				movie:movie
 		});
 	});
