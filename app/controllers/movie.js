@@ -41,7 +41,7 @@ exports.update = function(req,res){
 };
 
 // admin
-exports.new = function(req,res){
+exports.save = function(req,res){
 
 	res.render('admin',{
 		title:'后台管理页面',
@@ -59,7 +59,7 @@ exports.new = function(req,res){
 };
 
 // admin post movie
-exports.save = function(req,res){
+exports.new = function(req,res){
 	var id = req.body.movie._id;
 	var movieObj = req.body.movie;
 	var _movie;

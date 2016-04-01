@@ -42,6 +42,7 @@ exports.singin = function(req,res){
 			return res.redirect('/');
 		}else{
 			console.log('Password is not mathed');
+			return res.redirect('/signin')
 		}
 	});
 };
@@ -56,6 +57,7 @@ exports.logout = function(req,res){
 
 // userlist page
 exports.list = function(req,res){
+
 	User.fetch(function(err,users) {
 		if(err){
 			console.log(err);
@@ -80,3 +82,23 @@ exports.showSignin = function(req,res){
 		title: '登录页面'
 	});
 };
+
+// midware for user
+exports.signinRequired = function(req, res, next){
+	var user = req.session.user;
+
+	if(!user){
+		return res.redirect('/signin');
+	}
+
+	next();
+}
+
+exports.adminRequired = function(req, res, next){
+	var user = req.session.user;
+
+	if(user.role <=10){
+		return res.redirect('/signin');
+	}
+	next();
+}

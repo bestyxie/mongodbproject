@@ -16,12 +16,12 @@ module.exports = function(app){
 	app.get('/',Index.index);
 
 	// Movie
-	app.get('/admin/list',Movie.list);
+	app.get('/admin/movie/list', User.signinRequired, User.adminRequired, Movie.list);
 	app.get('/movie/:id',Movie.details);
-	app.get('/admin/update/:id',Movie.update);
-	app.get('/admin/movie',Movie.new);
-	app.post('/admin/movie/new',Movie.save);
-	app.delete('/admin/list',Movie.del);
+	app.get('/admin/movie/update/:id', User.signinRequired, User.adminRequired, Movie.update);
+	app.get('/admin/movie',Movie.save);
+	app.post('/admin/movie/new', User.signinRequired, User.adminRequired, Movie.new);
+	app.delete('/admin/movie/list', User.signinRequired, User.adminRequired, Movie.del);
 
 	// User
 	app.post('/user/signup',User.signup);
@@ -29,5 +29,5 @@ module.exports = function(app){
 	app.get('/signin',User.showSignin);
 	app.get('/signup',User.showSignup)
 	app.get('/logout',User.logout);
-	app.get('/admin/userlist',User.list);
+	app.get('/admin/user/list', User.signinRequired, User.adminRequired, User.list);
 }
