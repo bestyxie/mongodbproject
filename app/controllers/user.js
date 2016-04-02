@@ -4,7 +4,7 @@ var User = require('../models/user');
 exports.signup = function(req,res){
 	var _user = req.body.user;
 
-	User.find({name: _user.name}, function(err,user){
+	User.findOne({name: _user.name}, function(err,user){
 		if(err){
 			console.log(err);
 		}
